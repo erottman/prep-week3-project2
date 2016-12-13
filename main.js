@@ -150,7 +150,7 @@ var temp = "23";
 
 function temperature() {
   var tempNum = parseFloat(temp);
-  return ((tempNum * 9) / 5) + 32);
+  return (((tempNum * 9) / 5) + 32);
 }
 
 temperature(temp);
@@ -161,6 +161,16 @@ console.log(temperature(temp));
 //    or from Celsius to Fahrenheit. To keep it simple, instruct them to use "F to C" or "C to F".
 //    Display an error if they do not follow the rules.
 
+
+var temp = "73";
+
+function temperature() {
+  var tempNum = parseFloat(temp);
+  return (((tempNum - 32) * 5) / 9).toFixed(0);
+}
+
+temperature(temp);
+console.log(temperature(temp));
 
 
 
