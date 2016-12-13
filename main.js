@@ -130,17 +130,31 @@ console.log(totalMultiple);
 //    that are less than six characters.
 var words = ["window", "table", "cup", "knife", "barstool", "glass", "charger", "outlet"];
 
+function filterSixPlus(array) {
+  for (var i = 0; i < array.length; i++) {
+    if(array[i].length > 6) {
+      array.splice(i,1);
+      console.log(array[i].splice(i,1));
+    }
+  }
+}
 
-
+filterSixPlus(words);
 
 
 
 // 6. Use a function to ask a user for a temperature in Celsius and converts it to Fahrenheit.
 //    HINT: You may need to use parseFloat to convert the user's string input to a float.
 
+var temp = "23";
 
+function temperature() {
+  var tempNum = parseFloat(temp);
+  return ((tempNum * 9) / 5) + 32);
+}
 
-
+temperature(temp);
+console.log(temperature(temp));
 
 
 // 7. Adding to the code in #6, ask the user a second time to determine whether they'd like to convert from Fahrenheit to Celsius
