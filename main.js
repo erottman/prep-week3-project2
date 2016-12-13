@@ -54,7 +54,7 @@ document.getElementById('submitBtn').addEventListener("click", function minimum2
         largestNumber = number2;
         document.getElementById('q1a').innerHtml += largestNumber;
     }
-console.log(largestNumber);
+    console.log(largestNumber);
 });
 
 
@@ -70,20 +70,36 @@ console.log(largestNumber);
 //    and the smallest displayed within the HTML page.
 
 
-function minimum3(num1,num2,num3) {
-return Math.max(num1,num2,num3)
+function minimum3(num1, num2, num3) {
+    return Math.max(num1, num2, num3)
 
 }
-minimum3(1,2,10);
-console.log(minimum3(1,2,10));
+minimum3(1, 2, 10);
+console.log(minimum3(1, 2, 10));
 
 
-// 3. Declare a function called sum() that takes an array of numbers as an argument adds them together and displays the result within the HTML page.
+// 3. Declare a function called sum() that takes an array of numbers as an argument adds them
+// together and displays the result within the HTML page.
 //    i.e. sum([1, 2, 3, 4]) should return 10.
 
+var sum = [4, 5, 2, 20, 18].reduce(add, 0);
 
+function add(a, b) {
+    return a + b;
+}
 
+console.log(sum);
 
+var total = 0;
+var sumArray2 = [4, 5, 2, 20, 18];
+
+function sum2(array) {
+  for (var i = 0; i < array.length; i++) {
+    total += array[i];
+  }
+}
+sum2(sumArray2);
+console.log(total);
 
 // 4. Declare a function called multiply() that takes an array of numbers and multiplies them together.
 //    i.e. multiply([1, 2, 3, 4]) should return 24.
