@@ -105,8 +105,25 @@ console.log(total);
 //    i.e. multiply([1, 2, 3, 4]) should return 24.
 
 
+var multiplySum = [3,5,6,7].reduce(multiplyOne, 1);
+
+function multiplyOne(a, b) {
+  return a * b;
+}
+console.log(multiplySum);
 
 
+
+arrayMultiply = [2,6,7,8,9];
+totalMultiple = 2;
+
+function multiply(array) {
+  for (var i = 1; i < array.length; i++) {
+    totalMultiple *= array[i]
+  }
+}
+multiply(arrayMultiply);
+console.log(totalMultiple);
 
 
 // 5. Write a function called filterSixPlus() that takes the following array and removes words
