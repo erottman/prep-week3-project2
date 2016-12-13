@@ -207,8 +207,18 @@ countA(stringA);
 // 10. Write a function called countChars() that behaves like countBs(), except it takes a
 //     second argument that indicates what character is to be counted.
 
+var stringll = "yellow";
+var counter = 0;
 
-
+function countChars(string, character) {
+  for (var i = 0; i < string.length; i++) {
+    if(string.charAt(i) === character) {
+      counter++
+    }
+  }
+}
+countChars(stringll, "l");
+console.log(counter);
 
 
 
