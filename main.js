@@ -25,15 +25,57 @@ ADVANCED TRACK: 10-13
 //    and outputs the smaller number into the HTML page.
 
 
+var largestNum = "0";
+
+function minimum(num1, num2) {
+    if (num1 > num2) {
+        largestNum = num1;
+    } else {
+        largestNum = num2;
+    }
+}
+minimum(3, 4);
+console.log(largestNum);
+document.getElementById('q1').innerHTML = largestNum;
 
 
 
-// 2. Create a new function called minimum3(), 
+
+document.getElementById('submitBtn').addEventListener("click", function minimum2(number1, number2) {
+    var number1 = document.getElementById("number1").value;
+    var number2 = document.getElementById("number2").value;
+    var largestNumber = "0";
+
+    if (number1 > number2) {
+        largestNumber = number1;
+        document.getElementById('q1a').innerHtml += largestNumber;
+
+    } else {
+        largestNumber = number2;
+        document.getElementById('q1a').innerHtml += largestNumber;
+    }
+console.log(largestNumber);
+});
+
+
+
+
+
+
+
+
+// 2. Create a new function called minimum3(),
 //    to find the smallest of three numbers,
-//    input by a user, 
+//    input by a user,
 //    and the smallest displayed within the HTML page.
 
 
+function minimum3(num1,num2,num3) {
+return Math.max(num1,num2,num3)
+
+}
+minimum3(1,2,10);
+console.log(minimum3(1,2,10));
 
 
 // 3. Declare a function called sum() that takes an array of numbers as an argument adds them together and displays the result within the HTML page.
@@ -84,8 +126,8 @@ var words = ["window", "table", "cup", "knife", "barstool", "glass", "charger", 
 
 
 // 9. http://games.usvsth3m.com/javascript-under-pressure/
-//    Have fun with these! 
-//    Get as far as you can and record your progress and time. 
+//    Have fun with these!
+//    Get as far as you can and record your progress and time.
 //    We'll try this again in a few weeks!
 
 
@@ -122,10 +164,3 @@ var words = ["window", "table", "cup", "knife", "barstool", "glass", "charger", 
 //     it will prompt the user to enter another guess and tell the user if the guess was
 //     too high or too low. This continues until the correct guess is entered.
 //     When the correct guess is entered the user is given a success message with the correct number.
-
-
-
-
-
-
-
