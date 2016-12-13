@@ -178,8 +178,18 @@ console.log(temperature(temp));
 //    a number that indicates how many uppercase “B” characters are in the string.
 //    HINT: Google charAt()
 
+var stringB = "blue bob burns bacon";
+console.log(stringB.split("b").length -1);
 
 
+var stringA = "aaaaa";
+
+function countA(string) {
+  stringA.split('a').length - 1;
+  console.log(stringA.split('a').length - 1);
+}
+
+countA(stringA);
 
 
 // 9. http://games.usvsth3m.com/javascript-under-pressure/
