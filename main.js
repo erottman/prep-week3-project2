@@ -280,6 +280,8 @@ function guessingGame() {
         } else if {
             (humanGuess < randomNum)
             console.log("Too Low Joe");
+      
+        }
     }
   }
 }
