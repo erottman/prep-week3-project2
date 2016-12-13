@@ -94,9 +94,9 @@ var total = 0;
 var sumArray2 = [4, 5, 2, 20, 18];
 
 function sum2(array) {
-  for (var i = 0; i < array.length; i++) {
-    total += array[i];
-  }
+    for (var i = 0; i < array.length; i++) {
+        total += array[i];
+    }
 }
 sum2(sumArray2);
 console.log(total);
@@ -105,22 +105,22 @@ console.log(total);
 //    i.e. multiply([1, 2, 3, 4]) should return 24.
 
 
-var multiplySum = [3,5,6,7].reduce(multiplyOne, 1);
+var multiplySum = [3, 5, 6, 7].reduce(multiplyOne, 1);
 
 function multiplyOne(a, b) {
-  return a * b;
+    return a * b;
 }
 console.log(multiplySum);
 
 
 
-arrayMultiply = [2,6,7,8,9];
+arrayMultiply = [2, 6, 7, 8, 9];
 totalMultiple = 2;
 
 function multiply(array) {
-  for (var i = 1; i < array.length; i++) {
-    totalMultiple *= array[i]
-  }
+    for (var i = 1; i < array.length; i++) {
+        totalMultiple *= array[i]
+    }
 }
 multiply(arrayMultiply);
 console.log(totalMultiple);
@@ -131,12 +131,12 @@ console.log(totalMultiple);
 var words = ["window", "table", "cup", "knife", "barstool", "glass", "charger", "outlet"];
 
 function filterSixPlus(array) {
-  for (var i = 0; i < array.length; i++) {
-    if(array[i].length > 6) {
-      array.splice(i,1);
-      console.log(array[i].splice(i,1));
+    for (var i = 0; i < array.length; i++) {
+        if (array[i].length > 6) {
+            array.splice(i, 1);
+            console.log(array[i].splice(i, 1));
+        }
     }
-  }
 }
 
 filterSixPlus(words);
@@ -149,8 +149,8 @@ filterSixPlus(words);
 var temp = "23";
 
 function temperature() {
-  var tempNum = parseFloat(temp);
-  return (((tempNum * 9) / 5) + 32);
+    var tempNum = parseFloat(temp);
+    return (((tempNum * 9) / 5) + 32);
 }
 
 temperature(temp);
@@ -165,8 +165,8 @@ console.log(temperature(temp));
 var temp = "73";
 
 function temperature() {
-  var tempNum = parseFloat(temp);
-  return (((tempNum - 32) * 5) / 9).toFixed(0);
+    var tempNum = parseFloat(temp);
+    return (((tempNum - 32) * 5) / 9).toFixed(0);
 }
 
 temperature(temp);
@@ -179,14 +179,14 @@ console.log(temperature(temp));
 //    HINT: Google charAt()
 
 var stringB = "blue bob burns bacon";
-console.log(stringB.split("b").length -1);
+console.log(stringB.split("b").length - 1);
 
 
 var stringA = "aaaaa";
 
 function countA(string) {
-  stringA.split('a').length - 1;
-  console.log(stringA.split('a').length - 1);
+    stringA.split('a').length - 1;
+    console.log(stringA.split('a').length - 1);
 }
 
 countA(stringA);
@@ -211,11 +211,11 @@ var stringll = "yellow";
 var counter = 0;
 
 function countChars(string, character) {
-  for (var i = 0; i < string.length; i++) {
-    if(string.charAt(i) === character) {
-      counter++
+    for (var i = 0; i < string.length; i++) {
+        if (string.charAt(i) === character) {
+            counter++;
+        }
     }
-  }
 }
 countChars(stringll, "l");
 console.log(counter);
@@ -224,15 +224,33 @@ console.log(counter);
 
 // 11. Declare a function called ohZero that replaces all of the o's in a string with 0's.
 
+var stringo = "ohZeroO";
+var stringArray = stringo.split("");
 
 
-
+function change(array) {
+  for (var i = 0; i < array.length; i++) {
+  if(array[i] === "o") {
+    array[i] = 0;
+  }else if(array[i] === "O") {
+    array[i] = 0;
+  }
+  array.toString();
+}
+}
+change(stringArray);
+  console.log(stringArray.join());
 
 
 // 12. Write a function that prints out the entire "99 Bottles of Beer on the Wall" song lyrics.
+var bottles = 99;
 
-
-
+function lyrics() {
+while (bottles > 99) {
+  console.log(bottles + "Bottles of Beers on the wall" +bottles + "Bottles of Beers");
+ }
+};
+lyrics();
 
 
 
