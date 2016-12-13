@@ -229,28 +229,29 @@ var stringArray = stringo.split("");
 
 
 function change(array) {
-  for (var i = 0; i < array.length; i++) {
-  if(array[i] === "o") {
-    array[i] = 0;
-  }else if(array[i] === "O") {
-    array[i] = 0;
-  }
-  array.toString();
-}
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === "o") {
+            array[i] = 0;
+        } else if (array[i] === "O") {
+            array[i] = 0;
+        }
+        array.toString();
+    }
 }
 change(stringArray);
-  console.log(stringArray.join());
+console.log(stringArray.join());
 
 
 // 12. Write a function that prints out the entire "99 Bottles of Beer on the Wall" song lyrics.
-var bottles = 99;
 
-function lyrics() {
-while (bottles > 99) {
-  console.log(bottles + "Bottles of Beers on the wall" +bottles + "Bottles of Beers");
- }
+
+function lyrics(bottles) {
+    while (bottles > 0) {
+        console.log(bottles + "Bottles of Beers on the wall" + bottles + "Bottles of Beers");
+        bottles--;
+    }
 };
-lyrics();
+lyrics(99);
 
 
 
@@ -259,3 +260,26 @@ lyrics();
 //     it will prompt the user to enter another guess and tell the user if the guess was
 //     too high or too low. This continues until the correct guess is entered.
 //     When the correct guess is entered the user is given a success message with the correct number.
+
+
+function guessingGame() {
+    var randomNum = Math.floor(Math.random() * 51);
+    var humanGuess = prompt("Please enter a number between 1 -50");
+    var guess = humanGuess;
+
+    if (guess === randomNum) {
+        console.log("Winner Winner Chicken Dinner");
+        break;
+    }
+    while (humanGuess !== randomNum) {
+        humanGuess = prompt("Please enter a number between 1 -50");
+        guess = humanGuess;
+
+        if (humanGuess > randomNum) {
+            console.log("Too High to the Sky");
+        } else if {
+            (humanGuess < randomNum)
+            console.log("Too Low Joe");
+    }
+  }
+}
